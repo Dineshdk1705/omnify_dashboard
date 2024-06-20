@@ -1,7 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 1rem; /* h-4 in Tailwind */
+  width: 1rem; /* w-4 in Tailwind */
+  border: 1px solid #d1d5db; /* border-gray-300 in Tailwind */
+  border-radius: 0.25rem; /* rounded in Tailwind */
+  display: inline-block;
+  position: relative;
+}
+
+input[type="radio"]:checked + label .w-2 {
+  opacity: 1;
+}
+
+.custom-checkbox:checked {
+  background-color: black;
+  border-color: black;
+}
+
+.custom-checkbox:checked::after {
+  content: "✓"; /* Unicode for checkmark */
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem; /* Adjust as needed */
+}
+
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,4 +68,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

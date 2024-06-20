@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "bottom-only": "0 3px 3px -1px rgba(0, 0, 0, 0.1)",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
